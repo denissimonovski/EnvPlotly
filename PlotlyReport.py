@@ -99,7 +99,7 @@ def iscrtaj():
                         name="Temperatura SS1",
                         line=dict(
                             color="red",
-                            width=1,
+                            width=3,
                             dash='line'
                         ),
                         yaxis=dict(
@@ -112,7 +112,7 @@ def iscrtaj():
                         name="Temperature SS24",
                         line=dict(
                             color="blue",
-                            width=1,
+                            width=3,
                             dash='line'
                         )
                         )
@@ -122,7 +122,7 @@ def iscrtaj():
                         name="Temperature SS2",
                         line=dict(
                             color="orange",
-                            width=1,
+                            width=3,
                             dash='line'
                         )
                         )
@@ -132,7 +132,7 @@ def iscrtaj():
                         name="Temperature OH",
                         line=dict(
                             color="purple",
-                            width=1,
+                            width=3,
                             dash='line'
                         ))
     df5 = pd.read_csv("humidity.csv")
@@ -141,7 +141,7 @@ def iscrtaj():
                         name="Vlaznost SS1",
                         line=dict(
                             color="red",
-                            width=1,
+                            width=3,
                             dash='line'
                         ))
     df6 = pd.read_csv("plafon.csv")
@@ -150,7 +150,7 @@ def iscrtaj():
                         name="Vlaznost SS24",
                         line=dict(
                             color="blue",
-                            width=1,
+                            width=3,
                             dash='line'
                         ))
     trace7 = go.Scatter(x=df3.Date,
@@ -158,7 +158,7 @@ def iscrtaj():
                         name="Vlaznost SS2",
                         line=dict(
                             color="orange",
-                            width=1,
+                            width=3,
                             dash='line'
                         ))
     trace8 = go.Scatter(x=df4.Date,
@@ -166,7 +166,7 @@ def iscrtaj():
                         name="Vlaznost OH",
                         line=dict(
                             color="purple",
-                            width=1,
+                            width=3,
                             dash='line'
                         ))
     fig1 = py.tools.make_subplots(rows=4, cols=1)
