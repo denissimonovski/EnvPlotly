@@ -101,6 +101,9 @@ def iscrtaj():
                             color="red",
                             width=1,
                             dash='line'
+                        ),
+                        yaxis=dict(
+                            title="Temperatura SS1"
                         )
                         )
     df2 = pd.read_csv("ss24.csv")
@@ -171,13 +174,27 @@ def iscrtaj():
     fig1.append_trace(trace2, 2, 1)
     fig1.append_trace(trace3, 3, 1)
     fig1.append_trace(trace4, 4, 1)
-    py.offline.plot(fig1, filename='test1.html')
+    fig1['layout']['yaxis1'].update(title='Temperatura SS1')
+    fig1['layout']['yaxis2'].update(title='Temperatura SS24x7')
+    fig1['layout']['yaxis3'].update(title='Temperatura SS2')
+    fig1['layout']['yaxis4'].update(title='Temperatura Ohrid')
+    fig1['layout'].update(title='Temperatura - Nedelen Report')
+    fig1['layout'].update(paper_bgcolor='rgb(238,238,238)')
+    fig1['layout'].update(plot_bgcolor='rgb(238,238,238)')
+    py.offline.plot(fig1, filename='temperature.html')
     fig2 = py.tools.make_subplots(rows=4, cols=1)
     fig2.append_trace(trace5, 1, 1)
     fig2.append_trace(trace6, 2, 1)
     fig2.append_trace(trace7, 3, 1)
     fig2.append_trace(trace8, 4, 1)
-    py.offline.plot(fig2, filename='test2.html')
+    fig2['layout']['yaxis1'].update(title='Vlaznost SS1')
+    fig2['layout']['yaxis2'].update(title='Vlaznost SS24x7')
+    fig2['layout']['yaxis3'].update(title='Vlaznost SS2')
+    fig2['layout']['yaxis4'].update(title='Vlaznost Ohrid')
+    fig2['layout'].update(title='Vlaznost - Nedelen Report')
+    fig2['layout'].update(paper_bgcolor='rgb(238,238,238)')
+    fig2['layout'].update(plot_bgcolor='rgb(238,238,238)')
+    py.offline.plot(fig2, filename='humidity.html')
 
 
 fajlovi()
