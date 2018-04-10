@@ -11,7 +11,7 @@ def get_time_stamp(datum, vreme):
 
 
 def fajlovi():
-    ss1 = 'SS1\n'
+    ss1 = 'Undefined #1\n'
     ss24 = '24x7\n'
     humidity = 'Humidity\n'
     plafon = 'Plafon\n'
@@ -70,12 +70,12 @@ def fajlovi():
         with open(envlozi[i]) as csvfile:
             csvfile.__next__()
             if i == 0:
-                readCSV = csv.reader(csvfile, delimiter=',')
+                readCSV = csv.reader(csvfile, delimiter='\t')
                 fajl = 'novss2.csv'
                 with open(fajl, "w") as f:
                     f.write("Date,Temperature,Humidity\n")
             if i == 1:
-                readCSV = csv.reader(csvfile, delimiter='\t')
+                readCSV = csv.reader(csvfile, delimiter=',')
                 fajl = 'novoh.csv'
                 with open(fajl, "w") as f:
                     f.write("Date,Temperature,Humidity\n")
