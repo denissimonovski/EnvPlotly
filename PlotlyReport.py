@@ -15,8 +15,8 @@ def fajlovi():
     ss24 = '24x7\n'
     humidity = 'Humidity\n'
     plafon = 'Plafon\n'
-    start_date = date(2017, 10, 23)
-    end_date = date(2017, 10, 29)
+    start_date = date(2018, 4, 2)
+    end_date = date(2018, 4, 8)
     envlozi = ['envlog.csv', 'envlog(1).csv']
 
     with open("data_log.txt") as fajl:
